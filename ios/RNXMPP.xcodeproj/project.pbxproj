@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		41A56E6A212EDBB2006826C8 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A56E69212EDBB2006826C8 /* libReact.a */; };
+		4114FBB0212F067F00E049A1 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4114FB91212F063700E049A1 /* libReact.a */; };
 		41A56E6E212EDBE1006826C8 /* KissXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A56E6B212EDBE1006826C8 /* KissXML.framework */; };
 		41A56E6F212EDBE1006826C8 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A56E6C212EDBE1006826C8 /* CocoaLumberjack.framework */; };
 		41A56E70212EDBE1006826C8 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A56E6D212EDBE1006826C8 /* CocoaAsyncSocket.framework */; };
@@ -16,15 +16,129 @@
 		41D7190F212EC14F00FF20ED /* RNXMPP.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D7190B212EC14E00FF20ED /* RNXMPP.m */; };
 		41D71910212EC14F00FF20ED /* RNXMPPConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D7190C212EC14F00FF20ED /* RNXMPPConstants.m */; };
 		41D71958212EC80200FF20ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D71957212EC80200FF20ED /* Foundation.framework */; };
-		D0F7268C6E766632683327E2 /* libPods-RNXMPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2040C11FDF9856E6A2B88801 /* libPods-RNXMPP.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4114FB90212F063700E049A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4114FB7D212F063700E049A1 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
+			remoteInfo = React;
+		};
+		4114FB92212F063700E049A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4114FB7D212F063700E049A1 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A28131D9B038B00D4039D;
+			remoteInfo = "React-tvOS";
+		};
+		4114FB94212F063700E049A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4114FB7D212F063700E049A1 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3C059A1DE3340900C268FA;
+			remoteInfo = yoga;
+		};
+		4114FB96212F063700E049A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4114FB7D212F063700E049A1 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3C06751DE3340C00C268FA;
+			remoteInfo = "yoga-tvOS";
+		};
+		4114FB98212F063700E049A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4114FB7D212F063700E049A1 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD9251DE5FBEC00167DC4;
+			remoteInfo = cxxreact;
+		};
+		4114FB9A212F063700E049A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4114FB7D212F063700E049A1 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD9321DE5FBEE00167DC4;
+			remoteInfo = "cxxreact-tvOS";
+		};
+		4114FB9C212F063700E049A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4114FB7D212F063700E049A1 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD90B1DE5FBD600167DC4;
+			remoteInfo = jschelpers;
+		};
+		4114FB9E212F063700E049A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4114FB7D212F063700E049A1 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD9181DE5FBD800167DC4;
+			remoteInfo = "jschelpers-tvOS";
+		};
+		4114FBA0212F063700E049A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4114FB7D212F063700E049A1 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EBF21BDC1FC498900052F4D5;
+			remoteInfo = jsinspector;
+		};
+		4114FBA2212F063700E049A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4114FB7D212F063700E049A1 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EBF21BFA1FC4989A0052F4D5;
+			remoteInfo = "jsinspector-tvOS";
+		};
+		4114FBA4212F063700E049A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4114FB7D212F063700E049A1 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 139D7ECE1E25DB7D00323FB7;
+			remoteInfo = "third-party";
+		};
+		4114FBA6212F063700E049A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4114FB7D212F063700E049A1 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D383D3C1EBD27B6005632C8;
+			remoteInfo = "third-party-tvOS";
+		};
+		4114FBA8212F063700E049A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4114FB7D212F063700E049A1 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 139D7E881E25C6D100323FB7;
+			remoteInfo = "double-conversion";
+		};
+		4114FBAA212F063700E049A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4114FB7D212F063700E049A1 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D383D621EBD27B9005632C8;
+			remoteInfo = "double-conversion-tvOS";
+		};
+		4114FBAC212F063700E049A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4114FB7D212F063700E049A1 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9936F3131F5F2E4B0010BF04;
+			remoteInfo = privatedata;
+		};
+		4114FBAE212F063700E049A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4114FB7D212F063700E049A1 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9936F32F1F5F2E5B0010BF04;
+			remoteInfo = "privatedata-tvOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		58B511D91A9E6C8500147676 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
+			dstSubfolderSpec = 10;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,18 +147,7 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNXMPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNXMPP.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		2040C11FDF9856E6A2B88801 /* libPods-RNXMPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNXMPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		41A56E53212ECF51006826C8 /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		41A56E57212ED3A9006826C8 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		41A56E59212ED3A9006826C8 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		41A56E5B212ED3A9006826C8 /* React.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = React.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		41A56E5D212ED3A9006826C8 /* XMPPFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = XMPPFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		41A56E5F212ED65A006826C8 /* libCocoaAsyncSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCocoaAsyncSocket.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		41A56E61212ED65A006826C8 /* libCocoaLumberjack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCocoaLumberjack.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		41A56E63212ED65A006826C8 /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		41A56E65212ED65A006826C8 /* libXMPPFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libXMPPFramework.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		41A56E67212ED68D006826C8 /* libKissXML.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libKissXML.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		41A56E69212EDBB2006826C8 /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4114FB7D212F063700E049A1 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		41A56E6B212EDBE1006826C8 /* KissXML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KissXML.framework; path = Carthage/Build/iOS/KissXML.framework; sourceTree = "<group>"; };
 		41A56E6C212EDBE1006826C8 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
 		41A56E6D212EDBE1006826C8 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/iOS/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
@@ -57,8 +160,6 @@
 		41D7190C212EC14F00FF20ED /* RNXMPPConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNXMPPConstants.m; path = RNXMPP/RNXMPPConstants.m; sourceTree = "<group>"; };
 		41D7190D212EC14F00FF20ED /* RNXMPP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNXMPP.h; path = RNXMPP/RNXMPP.h; sourceTree = "<group>"; };
 		41D71957212EC80200FF20ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		5DDEA27627B5F6ECA6F3A204 /* Pods-RNXMPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNXMPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RNXMPP/Pods-RNXMPP.debug.xcconfig"; sourceTree = "<group>"; };
-		9B289EEFF6E9DDF2813C17C3 /* Pods-RNXMPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNXMPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-RNXMPP/Pods-RNXMPP.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +167,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4114FBB0212F067F00E049A1 /* libReact.a in Frameworks */,
 				41A56E72212EDD29006826C8 /* XMPPFramework.framework in Frameworks */,
 				41A56E6E212EDBE1006826C8 /* KissXML.framework in Frameworks */,
 				41A56E6F212EDBE1006826C8 /* CocoaLumberjack.framework in Frameworks */,
 				41A56E70212EDBE1006826C8 /* CocoaAsyncSocket.framework in Frameworks */,
-				41A56E6A212EDBB2006826C8 /* libReact.a in Frameworks */,
 				41D71958212EC80200FF20ED /* Foundation.framework in Frameworks */,
-				D0F7268C6E766632683327E2 /* libPods-RNXMPP.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +187,37 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		4114FB7C212F061100E049A1 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				4114FB7D212F063700E049A1 /* React.xcodeproj */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		4114FB7E212F063700E049A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4114FB91212F063700E049A1 /* libReact.a */,
+				4114FB93212F063700E049A1 /* libReact.a */,
+				4114FB95212F063700E049A1 /* libyoga.a */,
+				4114FB97212F063700E049A1 /* libyoga.a */,
+				4114FB99212F063700E049A1 /* libcxxreact.a */,
+				4114FB9B212F063700E049A1 /* libcxxreact.a */,
+				4114FB9D212F063700E049A1 /* libjschelpers.a */,
+				4114FB9F212F063700E049A1 /* libjschelpers.a */,
+				4114FBA1212F063700E049A1 /* libjsinspector.a */,
+				4114FBA3212F063700E049A1 /* libjsinspector-tvOS.a */,
+				4114FBA5212F063700E049A1 /* libthird-party.a */,
+				4114FBA7212F063700E049A1 /* libthird-party.a */,
+				4114FBA9212F063700E049A1 /* libdouble-conversion.a */,
+				4114FBAB212F063700E049A1 /* libdouble-conversion.a */,
+				4114FBAD212F063700E049A1 /* libprivatedata.a */,
+				4114FBAF212F063700E049A1 /* libprivatedata-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		41D71956212EC80200FF20ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,19 +225,7 @@
 				41A56E6D212EDBE1006826C8 /* CocoaAsyncSocket.framework */,
 				41A56E6C212EDBE1006826C8 /* CocoaLumberjack.framework */,
 				41A56E6B212EDBE1006826C8 /* KissXML.framework */,
-				41A56E69212EDBB2006826C8 /* libReact.a */,
-				41A56E67212ED68D006826C8 /* libKissXML.a */,
-				41A56E5F212ED65A006826C8 /* libCocoaAsyncSocket.a */,
-				41A56E61212ED65A006826C8 /* libCocoaLumberjack.a */,
-				41A56E63212ED65A006826C8 /* libReact.a */,
-				41A56E65212ED65A006826C8 /* libXMPPFramework.a */,
-				41A56E57212ED3A9006826C8 /* CocoaAsyncSocket.framework */,
-				41A56E59212ED3A9006826C8 /* CocoaLumberjack.framework */,
-				41A56E5B212ED3A9006826C8 /* React.framework */,
-				41A56E5D212ED3A9006826C8 /* XMPPFramework.framework */,
-				41A56E53212ECF51006826C8 /* libReact.a */,
 				41D71957212EC80200FF20ED /* Foundation.framework */,
-				2040C11FDF9856E6A2B88801 /* libPods-RNXMPP.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -114,6 +233,7 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				4114FB7C212F061100E049A1 /* Libraries */,
 				41D7190D212EC14F00FF20ED /* RNXMPP.h */,
 				41D7190B212EC14E00FF20ED /* RNXMPP.m */,
 				41D71907212EC14E00FF20ED /* RNXMPPConstants.h */,
@@ -123,17 +243,7 @@
 				41D7190A212EC14E00FF20ED /* XMPPFramework.h */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				41D71956212EC80200FF20ED /* Frameworks */,
-				EA6D5268ECE99474F4433520 /* Pods */,
 			);
-			sourceTree = "<group>";
-		};
-		EA6D5268ECE99474F4433520 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5DDEA27627B5F6ECA6F3A204 /* Pods-RNXMPP.debug.xcconfig */,
-				9B289EEFF6E9DDF2813C17C3 /* Pods-RNXMPP.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,7 +253,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNXMPP" */;
 			buildPhases = (
-				5C0727A55740D80C11DD6A67 /* [CP] Check Pods Manifest.lock */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
@@ -181,6 +290,12 @@
 			mainGroup = 58B511D21A9E6C8500147676;
 			productRefGroup = 58B511D21A9E6C8500147676;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4114FB7E212F063700E049A1 /* Products */;
+					ProjectRef = 4114FB7D212F063700E049A1 /* React.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				58B511DA1A9E6C8500147676 /* RNXMPP */,
@@ -188,26 +303,120 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		5C0727A55740D80C11DD6A67 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RNXMPP-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
+/* Begin PBXReferenceProxy section */
+		4114FB91212F063700E049A1 /* libReact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReact.a;
+			remoteRef = 4114FB90212F063700E049A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-/* End PBXShellScriptBuildPhase section */
+		4114FB93212F063700E049A1 /* libReact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReact.a;
+			remoteRef = 4114FB92212F063700E049A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4114FB95212F063700E049A1 /* libyoga.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libyoga.a;
+			remoteRef = 4114FB94212F063700E049A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4114FB97212F063700E049A1 /* libyoga.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libyoga.a;
+			remoteRef = 4114FB96212F063700E049A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4114FB99212F063700E049A1 /* libcxxreact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcxxreact.a;
+			remoteRef = 4114FB98212F063700E049A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4114FB9B212F063700E049A1 /* libcxxreact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcxxreact.a;
+			remoteRef = 4114FB9A212F063700E049A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4114FB9D212F063700E049A1 /* libjschelpers.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjschelpers.a;
+			remoteRef = 4114FB9C212F063700E049A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4114FB9F212F063700E049A1 /* libjschelpers.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjschelpers.a;
+			remoteRef = 4114FB9E212F063700E049A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4114FBA1212F063700E049A1 /* libjsinspector.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjsinspector.a;
+			remoteRef = 4114FBA0212F063700E049A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4114FBA3212F063700E049A1 /* libjsinspector-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libjsinspector-tvOS.a";
+			remoteRef = 4114FBA2212F063700E049A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4114FBA5212F063700E049A1 /* libthird-party.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libthird-party.a";
+			remoteRef = 4114FBA4212F063700E049A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4114FBA7212F063700E049A1 /* libthird-party.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libthird-party.a";
+			remoteRef = 4114FBA6212F063700E049A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4114FBA9212F063700E049A1 /* libdouble-conversion.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libdouble-conversion.a";
+			remoteRef = 4114FBA8212F063700E049A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4114FBAB212F063700E049A1 /* libdouble-conversion.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libdouble-conversion.a";
+			remoteRef = 4114FBAA212F063700E049A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4114FBAD212F063700E049A1 /* libprivatedata.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libprivatedata.a;
+			remoteRef = 4114FBAC212F063700E049A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4114FBAF212F063700E049A1 /* libprivatedata-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libprivatedata-tvOS.a";
+			remoteRef = 4114FBAE212F063700E049A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
@@ -323,17 +532,15 @@
 		};
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5DDEA27627B5F6ECA6F3A204 /* Pods-RNXMPP.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
+					"${BUILT_PRODUCTS_DIR}/**",
 					../node_modules/react_native,
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)/../../../React/**",
-					"$(SRCROOT)/../../react-native/React/**",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
@@ -344,17 +551,15 @@
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9B289EEFF6E9DDF2813C17C3 /* Pods-RNXMPP.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
+					"${BUILT_PRODUCTS_DIR}/**",
 					../node_modules/react_native,
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)/../../../React/**",
-					"$(SRCROOT)/../../react-native/React/**",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
