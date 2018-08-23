@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>android</name>
-	<comment>Project android created by Buildship.</comment>
+	<comment>RNXMPP wrapper for Smack on Android.</comment>
 	<projects>
 	</projects>
 	<buildSpec>
