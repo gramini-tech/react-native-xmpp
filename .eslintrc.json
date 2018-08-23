@@ -1,0 +1,49 @@
+{
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 6
+    },
+    "env": {
+        "amd": true,
+        "browser": true,
+        "es6": true
+    },
+    "plugins": [
+        "react",
+        "babel",
+        "flowtype",
+        "react-native"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "react-native",
+        "plugin:flowtype/recommended"
+    ],
+    "rules": {
+        "react/display-name": [0, { "ignoreTranspilerName": true }],
+        "no-unused-vars": ["error", { "args": "none" }],
+        "import/prefer-default-export": 0,
+        "no-invalid-this": 0,
+        "babel/no-invalid-this": 1,
+        "class-methods-use-this": [1, { "exceptMethods": [
+            "componentDidMount",
+            "componentDidUpdate",
+            "componentWillMount",
+            "componentWillReceiveProps",
+            "componentWillUnmount",
+            "componentWillUpdate",
+            "render",
+            "shouldComponentUpdate"
+        ]}]
+    },
+    "settings": {
+        "react": {
+            "createClass": "createReactClass", 
+            "pragma": "React", 
+            "version": "16.4",
+            "flowVersion": "0.78" 
+        },
+        "propWrapperFunctions": ["forbidExtraProps"]
+    }
+}

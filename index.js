@@ -1,10 +1,12 @@
+//@flow
+/* global __DEV__ */
 'use strict';
-var React = require('react-native');
-var {NativeAppEventEmitter, NativeModules} = React;
-var RNXMPP = NativeModules.RNXMPP;
+import React from 'react-native';
+const { NativeAppEventEmitter, NativeModules } = React;
+const {RNXMPP} = NativeModules;
 
-var map = {
-    'message' : 'RNXMPPMessage',
+const map = {
+    'message': 'RNXMPPMessage',
     'iq': 'RNXMPPIQ',
     'presence': 'RNXMPPPresence',
     'connect': 'RNXMPPConnect',
@@ -15,138 +17,132 @@ var map = {
     'roster': 'RNXMPPRoster'
 }
 
-const LOG = (message) => {
-  if (__DEV__) {
-    console.log('react-native-xmpp: ' + message);
-  }
+export type Events = $Keys<typeof map>;
+
+const LOG = (...message: Array<{} | string | Array<any>>) => {
+    if (__DEV__) {
+        //eslint-disable-next-line
+        console.log('rnxmpp: ', message);
+    }
 }
 
-class XMPP {
-    PLAIN = RNXMPP.PLAIN;
-    SCRAM = RNXMPP.SCRAMSHA1;
-    MD5 = RNXMPP.DigestMD5;
+class XMPPWrapper {
+    +xmppObj: any = RNXMPP;
+    PLAIN: any = this.xmppObj.PLAIN;
+    SCRAM: any = this.xmppObj.SCRAMSHA1;
+    MD5: any = this.xmppObj.DigestMD5;
+    isConnected: boolean = false;
+    isLogged: boolean = false;
+    defaultListeners: Array<any> = []; //fix types
+    listeners: Array<any> = []; //fix types
 
-    constructor(){
+
+    constructor(enableDefaultListeners: boolean = true) {
         this.isConnected = false;
         this.isLogged = false;
+        if (enableDefaultListeners)
+            this.bindDefaultListeners();
+    }
+
+    bindDefaultListeners(): void {
         this.listeners = [
             NativeAppEventEmitter.addListener(map.connect, this.onConnected.bind(this)),
             NativeAppEventEmitter.addListener(map.disconnect, this.onDisconnected.bind(this)),
-            NativeAppEventEmitter.addListener(map.error, this.onError.bind(this)),
+            NativeAppEventEmitter.addListener(map.error, XMPPWrapper.onError.bind(this)),
             NativeAppEventEmitter.addListener(map.loginError, this.onLoginError.bind(this)),
             NativeAppEventEmitter.addListener(map.login, this.onLogin.bind(this)),
         ];
     }
 
-    onConnected(){
+    onConnected(): void {
         LOG("Connected");
         this.isConnected = true;
     }
 
-    onLogin(){
+    onLogin(): void {
         LOG("Login");
         this.isLogged = true;
     }
 
-    onDisconnected(error){
-        LOG("Disconnected, error: "+error);
+    onDisconnected(error: {}): void {
+        LOG("Disconnected, error: ", error);
         this.isConnected = false;
         this.isLogged = false;
     }
 
-    onError(text){
-        LOG("Error: "+text);
+    static onError(text: string): void {
+        LOG("Error: ", text);
     }
 
-    onLoginError(text){
+    onLoginError(text: string): void {
         this.isLogged = false;
-        LOG("LoginError: "+text);
+        LOG("LoginError: ", text);
     }
 
-    on(type, callback){
-        if (map[type]){
-            const listener = NativeAppEventEmitter.addListener(map[type], callback);
+    on(type: Events, callback: (any) => void): any {
+        if (map[type]) {
+            const listener: any = NativeAppEventEmitter.addListener(map[type], callback);
             this.listeners.push(listener);
             return listener;
-        } else {
-            throw "No registered type: " + type;
-        }
+        } 
+        throw new Error("No registered type: " + type);
     }
 
-    removeListener(type) {
+    removeListener(type: Events): void {
         if (map[type]) {
-            for (var i = 0; i < this.listeners.length; i++) {
-                var listener = this.listeners[i];
-                if (listener.eventType === map[type]) {
-                    listener.remove();
-                    var index = this.listeners.indexOf(listener);
-                    if (index > -1) {
-                        this.listeners.splice(index, 1);
-                    }
+            this.listeners = this.listeners.filter(listener => listener.eventType !== map[type]);
                     LOG(`Event listener of type "${type}" removed`);
-                }
             }
-        }
     }
 
-    removeListeners() {
-        for (var i = 0; i < this.listeners.length; i++) {
-            this.listeners[i].remove();
-        }
-
-        this.listeners = [
-            NativeAppEventEmitter.addListener(map.connect, this.onConnected.bind(this)),
-            NativeAppEventEmitter.addListener(map.disconnect, this.onDisconnected.bind(this)),
-            NativeAppEventEmitter.addListener(map.error, this.onError.bind(this)),
-            NativeAppEventEmitter.addListener(map.loginError, this.onLoginError.bind(this)),
-            NativeAppEventEmitter.addListener(map.login, this.onLogin.bind(this)),
-        ];
-        
+    removeListeners(): void {
+        this.listeners.map(listener => listener.remove());
         LOG('All event listeners removed');
     }
 
-    trustHosts(hosts){
-        React.NativeModules.RNXMPP.trustHosts(hosts);
+    trustHosts(hosts: Array<string>) {
+        this.xmppObj.trustHosts(hosts);
     }
 
-    connect(username, password, auth = RNXMPP.SCRAMSHA1, hostname = null, port = 5222){
-        if (!hostname){
-            hostname = (username+'@/').split('@')[1].split('/')[0];
+    connect(username: string, password: string, auth: any = RNXMPP.SCRAMSHA1, hostname: ?string = null, port: number = 5222): void {
+        if (!hostname) {
+            hostname = (username + '@/').split('@')[1].split('/')[0];
         }
-        React.NativeModules.RNXMPP.connect(username, password, auth, hostname, port);
+        this.xmppObj.connect(username, password, auth, hostname, port);
     }
 
-    message(text, user, thread = null){
-        LOG(`Message: "${text}" being sent to user: ${user}`);
-        React.NativeModules.RNXMPP.message(text, user, thread);
+    message(text: string | {}, user: string, thread: ?string = null) {
+        LOG(`Message:being sent to user: ${user}`, text);
+        this.xmppObj.message(text, user, thread);
     }
 
-    sendStanza(stanza){
-        RNXMPP.sendStanza(stanza);
+    sendStanza(stanza: any): void {
+        this.xmppObj.sendStanza(stanza);
     }
 
-    fetchRoster(){
-        RNXMPP.fetchRoster();
+    fetchRoster(): void {
+        this.xmppObj.fetchRoster();
     }
 
-    presence(to, type){
-        React.NativeModules.RNXMPP.presence(to, type);
+    presence(to: string, type: any): void {
+        this.xmppObj.presence(to, type);
     }
 
-    removeFromRoster(to){
-        React.NativeModules.RNXMPP.removeRoster(to);
+    removeFromRoster(to: any): void {
+        this.xmppObj.removeRoster(to);
     }
 
-    disconnect(){
-        if (this.isConnected){
-            React.NativeModules.RNXMPP.disconnect();
+    disconnect(): void {
+        if (this.isConnected) {
+            this.xmppObj.disconnect();
         }
     }
-    disconnectAfterSending(){
-      if (this.isConnected){
-        React.NativeModules.RNXMPP.disconnectAfterSending();
-      }
+    disconnectAfterSending(): void {
+        if (this.isConnected) {
+            this.xmppObj.disconnectAfterSending();
+        }
     }
 }
 
-module.exports = new XMPP();
+const XMPP = new XMPPWrapper();
+export default XMPP;

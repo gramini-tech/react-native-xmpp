@@ -1,0 +1,5 @@
+github "CocoaLumberjack/CocoaLumberjack" "3.4.2"
+github "chrisballinger/libidn-framework" "1.35"
+github "robbiehanson/CocoaAsyncSocket" "7.6.3"
+github "robbiehanson/KissXML" "5.2.3"
+github "robbiehanson/XMPPFramework" "4.0.0"

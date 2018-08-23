@@ -1,107 +1,35 @@
-# react-native-xmpp
 
-An XMPP library for React Native.
+# rnxmpp
 
-A simple interface for native XMPP communication. Both iOS and Android are supported.
-
-## Demo
-
-XmppDemo uses a Flux approach (check its `XmppStore`) to communicate with a sample XMPP server, where 4 accounts were registered.
-
-![demo-3](https://cloud.githubusercontent.com/assets/1321329/10537760/406affa6-73f4-11e5-986f-81a78adf129e.gif)
-
-## Example
-
-```js
-var XMPP = require('react-native-xmpp');
-
-// optional callbacks
-XMPP.on('message', (message) => console.log('MESSAGE:' + JSON.stringify(message)));
-XMPP.on('iq', (message) => console.log('IQ:' + JSON.stringify(message)));
-XMPP.on('presence', (message) => console.log('PRESENCE:' + JSON.stringify(message)));
-XMPP.on('error', (message) => console.log('ERROR:' + message));
-XMPP.on('loginError', (message) => console.log('LOGIN ERROR:' + message));
-XMPP.on('login', (message) => console.log('LOGGED!'));
-XMPP.on('connect', (message) => console.log('CONNECTED!'));
-XMPP.on('disconnect', (message) => console.log('DISCONNECTED!'));
-
-// trustHosts (ignore self-signed SSL issues)
-// Warning: Do not use this in production (security will be compromised).
-XMPP.trustHosts(['chat.google.com']);
-
-// connect
-XMPP.connect(MYJID, MYPASSWORD);
-
-// send message
-XMPP.message('Hello world!', TOJID);
-
-// disconnect
-XMPP.disconnect();
-
-// remove all event listeners (recommended on componentWillUnmount)
-XMPP.removeListeners();
-
-// remove specific event listener (type can be 'message', 'iq', etc.)
-XMPP.removeListener(TYPE);
-```
+This is a stand in replacement to the react-native-xmpp library. This is still WIP. Currently best set for manual installation.
 
 ## Getting started
 
-1. `npm install react-native-xmpp --save`
+#### iOS
 
-### iOS
+1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
+2. Go to `node_modules` ➜ `rnxmpp` and add `RNXMPP.xcodeproj`
+3. In XCode, in the project navigator, select your project. Add `libRNXPP.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
+4. Run your project (`Cmd+R`)<
 
-Please use CocoaPods 
+#### Android
 
-2. Install latest XMPPFramework:
-https://github.com/robbiehanson/XMPPFramework
-`pod 'XMPPFramework', :git => 'https://github.com/robbiehanson/XMPPFramework.git', :branch => 'master'`
+1. Open up `android/app/src/main/java/[...]/MainActivity.java`
+  - Add `import com.gramini.RNXMPPPackage;` to the imports at the top of the file
+  - Add `new RNXMPPPackage()` to the list returned by the `getPackages()` method
+2. Append the following lines to `android/settings.gradle`:
+  	```
+  	include ':rnxmpp'
+  	project(':rnxmpp').projectDir = new File(rootProject.projectDir, 	'../node_modules/rnxmpp/android')
+  	```
+3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
+  	```
+      compile project(':react-native-rnxmpp')
+  	```
 
-3. Add this package pod:
-`pod 'RNXMPP', :path => '../node_modules/react-native-xmpp'`
+## Usage
+```javascript
+import XMPP from 'rnxmpp';
 
-If you have problems with latest 4.0 XMPPFramework and/or XCode 9.3, you may use old one with forked KissXML:
-`pod 'XMPPFramework', '~> 3.7.0'`
-`pod 'KissXML', :git => "https://github.com/aksonov/KissXML.git", :branch => '5.1.4'`
-
-
-### Android
-`react-native link react-native-xmpp`
-
-If it doesn't link the react-native-xmpp correct:
-
-**android/settings.gradle**
-
-```gradle
-include ':react-native-xmpp'
-project(':react-native-xmpp').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-xmpp/android')
 ```
-
-**android/app/build.gradle**
-
-```gradle
-dependencies {
-   ...
-   compile project(':react-native-xmpp')
-}
-```
-
-**MainApplication.java**
-
-On top, where imports are:
-
-```java
-import rnxmpp.RNXMPPPackage;
-```
-
-Add the `ReactVideoPackage` class to your list of exported packages.
-
-```java
-@Override
-protected List<ReactPackage> getPackages() {
-    return Arrays.<ReactPackage>asList(
-        new MainReactPackage(),
-        new RNXMPPPackage()
-    );
-}
-```
+  

@@ -1,0 +1,390 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		41A56E6A212EDBB2006826C8 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A56E69212EDBB2006826C8 /* libReact.a */; };
+		41A56E6E212EDBE1006826C8 /* KissXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A56E6B212EDBE1006826C8 /* KissXML.framework */; };
+		41A56E6F212EDBE1006826C8 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A56E6C212EDBE1006826C8 /* CocoaLumberjack.framework */; };
+		41A56E70212EDBE1006826C8 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A56E6D212EDBE1006826C8 /* CocoaAsyncSocket.framework */; };
+		41A56E72212EDD29006826C8 /* XMPPFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A56E71212EDD29006826C8 /* XMPPFramework.framework */; };
+		41D7190E212EC14F00FF20ED /* RNXMPPService.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D71909212EC14E00FF20ED /* RNXMPPService.m */; };
+		41D7190F212EC14F00FF20ED /* RNXMPP.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D7190B212EC14E00FF20ED /* RNXMPP.m */; };
+		41D71910212EC14F00FF20ED /* RNXMPPConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D7190C212EC14F00FF20ED /* RNXMPPConstants.m */; };
+		41D71958212EC80200FF20ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D71957212EC80200FF20ED /* Foundation.framework */; };
+		D0F7268C6E766632683327E2 /* libPods-RNXMPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2040C11FDF9856E6A2B88801 /* libPods-RNXMPP.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		58B511D91A9E6C8500147676 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		134814201AA4EA6300B7C361 /* libRNXMPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNXMPP.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2040C11FDF9856E6A2B88801 /* libPods-RNXMPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNXMPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		41A56E53212ECF51006826C8 /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		41A56E57212ED3A9006826C8 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41A56E59212ED3A9006826C8 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41A56E5B212ED3A9006826C8 /* React.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = React.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41A56E5D212ED3A9006826C8 /* XMPPFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = XMPPFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41A56E5F212ED65A006826C8 /* libCocoaAsyncSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCocoaAsyncSocket.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		41A56E61212ED65A006826C8 /* libCocoaLumberjack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCocoaLumberjack.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		41A56E63212ED65A006826C8 /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		41A56E65212ED65A006826C8 /* libXMPPFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libXMPPFramework.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		41A56E67212ED68D006826C8 /* libKissXML.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libKissXML.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		41A56E69212EDBB2006826C8 /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		41A56E6B212EDBE1006826C8 /* KissXML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KissXML.framework; path = Carthage/Build/iOS/KissXML.framework; sourceTree = "<group>"; };
+		41A56E6C212EDBE1006826C8 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
+		41A56E6D212EDBE1006826C8 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/iOS/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
+		41A56E71212EDD29006826C8 /* XMPPFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XMPPFramework.framework; path = Carthage/Build/iOS/XMPPFramework.framework; sourceTree = "<group>"; };
+		41D71907212EC14E00FF20ED /* RNXMPPConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNXMPPConstants.h; path = RNXMPP/RNXMPPConstants.h; sourceTree = "<group>"; };
+		41D71908212EC14E00FF20ED /* RNXMPPService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNXMPPService.h; path = RNXMPP/RNXMPPService.h; sourceTree = "<group>"; };
+		41D71909212EC14E00FF20ED /* RNXMPPService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNXMPPService.m; path = RNXMPP/RNXMPPService.m; sourceTree = "<group>"; };
+		41D7190A212EC14E00FF20ED /* XMPPFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMPPFramework.h; path = RNXMPP/XMPPFramework.h; sourceTree = "<group>"; };
+		41D7190B212EC14E00FF20ED /* RNXMPP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNXMPP.m; path = RNXMPP/RNXMPP.m; sourceTree = "<group>"; };
+		41D7190C212EC14F00FF20ED /* RNXMPPConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNXMPPConstants.m; path = RNXMPP/RNXMPPConstants.m; sourceTree = "<group>"; };
+		41D7190D212EC14F00FF20ED /* RNXMPP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNXMPP.h; path = RNXMPP/RNXMPP.h; sourceTree = "<group>"; };
+		41D71957212EC80200FF20ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5DDEA27627B5F6ECA6F3A204 /* Pods-RNXMPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNXMPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RNXMPP/Pods-RNXMPP.debug.xcconfig"; sourceTree = "<group>"; };
+		9B289EEFF6E9DDF2813C17C3 /* Pods-RNXMPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNXMPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-RNXMPP/Pods-RNXMPP.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		58B511D81A9E6C8500147676 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41A56E72212EDD29006826C8 /* XMPPFramework.framework in Frameworks */,
+				41A56E6E212EDBE1006826C8 /* KissXML.framework in Frameworks */,
+				41A56E6F212EDBE1006826C8 /* CocoaLumberjack.framework in Frameworks */,
+				41A56E70212EDBE1006826C8 /* CocoaAsyncSocket.framework in Frameworks */,
+				41A56E6A212EDBB2006826C8 /* libReact.a in Frameworks */,
+				41D71958212EC80200FF20ED /* Foundation.framework in Frameworks */,
+				D0F7268C6E766632683327E2 /* libPods-RNXMPP.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		134814211AA4EA7D00B7C361 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				134814201AA4EA6300B7C361 /* libRNXMPP.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		41D71956212EC80200FF20ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41A56E71212EDD29006826C8 /* XMPPFramework.framework */,
+				41A56E6D212EDBE1006826C8 /* CocoaAsyncSocket.framework */,
+				41A56E6C212EDBE1006826C8 /* CocoaLumberjack.framework */,
+				41A56E6B212EDBE1006826C8 /* KissXML.framework */,
+				41A56E69212EDBB2006826C8 /* libReact.a */,
+				41A56E67212ED68D006826C8 /* libKissXML.a */,
+				41A56E5F212ED65A006826C8 /* libCocoaAsyncSocket.a */,
+				41A56E61212ED65A006826C8 /* libCocoaLumberjack.a */,
+				41A56E63212ED65A006826C8 /* libReact.a */,
+				41A56E65212ED65A006826C8 /* libXMPPFramework.a */,
+				41A56E57212ED3A9006826C8 /* CocoaAsyncSocket.framework */,
+				41A56E59212ED3A9006826C8 /* CocoaLumberjack.framework */,
+				41A56E5B212ED3A9006826C8 /* React.framework */,
+				41A56E5D212ED3A9006826C8 /* XMPPFramework.framework */,
+				41A56E53212ECF51006826C8 /* libReact.a */,
+				41D71957212EC80200FF20ED /* Foundation.framework */,
+				2040C11FDF9856E6A2B88801 /* libPods-RNXMPP.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58B511D21A9E6C8500147676 = {
+			isa = PBXGroup;
+			children = (
+				41D7190D212EC14F00FF20ED /* RNXMPP.h */,
+				41D7190B212EC14E00FF20ED /* RNXMPP.m */,
+				41D71907212EC14E00FF20ED /* RNXMPPConstants.h */,
+				41D7190C212EC14F00FF20ED /* RNXMPPConstants.m */,
+				41D71908212EC14E00FF20ED /* RNXMPPService.h */,
+				41D71909212EC14E00FF20ED /* RNXMPPService.m */,
+				41D7190A212EC14E00FF20ED /* XMPPFramework.h */,
+				134814211AA4EA7D00B7C361 /* Products */,
+				41D71956212EC80200FF20ED /* Frameworks */,
+				EA6D5268ECE99474F4433520 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		EA6D5268ECE99474F4433520 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5DDEA27627B5F6ECA6F3A204 /* Pods-RNXMPP.debug.xcconfig */,
+				9B289EEFF6E9DDF2813C17C3 /* Pods-RNXMPP.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		58B511DA1A9E6C8500147676 /* RNXMPP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNXMPP" */;
+			buildPhases = (
+				5C0727A55740D80C11DD6A67 /* [CP] Check Pods Manifest.lock */,
+				58B511D71A9E6C8500147676 /* Sources */,
+				58B511D81A9E6C8500147676 /* Frameworks */,
+				58B511D91A9E6C8500147676 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RNXMPP;
+			productName = RCTDataManager;
+			productReference = 134814201AA4EA6300B7C361 /* libRNXMPP.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		58B511D31A9E6C8500147676 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Facebook;
+				TargetAttributes = {
+					58B511DA1A9E6C8500147676 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNXMPP" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 58B511D21A9E6C8500147676;
+			productRefGroup = 58B511D21A9E6C8500147676;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				58B511DA1A9E6C8500147676 /* RNXMPP */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C0727A55740D80C11DD6A67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RNXMPP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		58B511D71A9E6C8500147676 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41D71910212EC14F00FF20ED /* RNXMPPConstants.m in Sources */,
+				41D7190F212EC14F00FF20ED /* RNXMPP.m in Sources */,
+				41D7190E212EC14F00FF20ED /* RNXMPPService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		58B511ED1A9E6C8500147676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		58B511EE1A9E6C8500147676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		58B511F01A9E6C8500147676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DDEA27627B5F6ECA6F3A204 /* Pods-RNXMPP.debug.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					../node_modules/react_native,
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = RNXMPP;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		58B511F11A9E6C8500147676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B289EEFF6E9DDF2813C17C3 /* Pods-RNXMPP.release.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					../node_modules/react_native,
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = RNXMPP;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNXMPP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58B511ED1A9E6C8500147676 /* Debug */,
+				58B511EE1A9E6C8500147676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNXMPP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58B511F01A9E6C8500147676 /* Debug */,
+				58B511F11A9E6C8500147676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 58B511D31A9E6C8500147676 /* Project object */;
+}
