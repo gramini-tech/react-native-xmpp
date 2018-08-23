@@ -33,5 +33,10 @@
   "license": "MIT",
   "peerDependencies": {
     "react-native": "^0.41.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "flow status && eslint ."
+    }
   }
 }
