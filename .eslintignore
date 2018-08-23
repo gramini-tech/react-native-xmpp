@@ -1,0 +1,4 @@
+# ignore non source files 
+android/**
+ios/**
+node_modules/**
