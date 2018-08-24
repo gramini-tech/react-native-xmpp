@@ -49,15 +49,15 @@ import java.util.logging.Logger;
  */
 
 public class XmppServiceSmackImpl implements XmppService, ChatManagerListener, StanzaListener, ConnectionListener, ChatMessageListener, RosterLoadedListener {
-    XmppServiceListener xmppServiceListener;
-    Logger logger = Logger.getLogger(XmppServiceSmackImpl.class.getName());
-    XmppGroupMessageListenerImpl groupMessageListner;
+    private XmppServiceListener xmppServiceListener;
+    private Logger logger = Logger.getLogger(XmppServiceSmackImpl.class.getName());
+    private XmppGroupMessageListenerImpl groupMessageListner;
 
 
-    XMPPTCPConnection connection;
-    Roster roster;
-    List<String> trustedHosts = new ArrayList<>();
-    String password;
+    private XMPPTCPConnection connection;
+    private Roster roster;
+    private List<String> trustedHosts = new ArrayList<>();
+    private String password;
 
     public XmppServiceSmackImpl(XmppServiceListener xmppServiceListener) {
         this.xmppServiceListener = xmppServiceListener;
@@ -95,7 +95,7 @@ public class XmppServiceSmackImpl implements XmppService, ChatManagerListener, S
             confBuilder.setPort(port);
         }
         if (trustedHosts.contains(hostname) || (hostname == null && trustedHosts.contains(serviceName))){
-            confBuilder.setSecurityMode(ConnectionConfiguration.SecurityMode.enabled);
+            confBuilder.setSecurityMode(SecurityMode.ifpossible);
             TLSUtils.disableHostnameVerificationForTlsCertificicates(confBuilder);
             try {
                 TLSUtils.acceptAllCertificates(confBuilder);
@@ -248,7 +248,7 @@ public class XmppServiceSmackImpl implements XmppService, ChatManagerListener, S
     public void sendStanza(String stanza) {
         StanzaPacket packet = new StanzaPacket(stanza);
         try {
-            connection.sendPacket(packet);
+            connection.sendStanza(packet);
         } catch (SmackException e) {
             logger.log(Level.WARNING, "Could not send stanza", e);
         }

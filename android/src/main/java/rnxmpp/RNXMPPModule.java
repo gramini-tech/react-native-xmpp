@@ -5,8 +5,8 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableArray;
 
-import org.jivesoftware.smackx.muc.MultiUserChat;
-import org.jivesoftware.smackx.muc.MultiUserChatManager;
+//import org.jivesoftware.smackx.muc.MultiUserChat;
+//import org.jivesoftware.smackx.muc.MultiUserChatManager;
 
 import java.util.logging.Logger;
 

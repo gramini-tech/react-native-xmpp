@@ -11,7 +11,7 @@ import com.facebook.react.bridge.ReadableArray;
 public interface XmppService {
 
     @ReactMethod
-    public void trustHosts(ReadableArray trustedHosts);
+    void trustHosts(ReadableArray trustedHosts);
 
     @ReactMethod
     void connect(String jid, String password, String authMethod, String hostname, Integer port);

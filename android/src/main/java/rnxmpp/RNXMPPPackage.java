@@ -1,6 +1,7 @@
 package rnxmpp;
 
 import com.facebook.react.ReactPackage;
+// import com.facebook.react.bridge.JavaScriptModule;
 import com.facebook.react.bridge.JavaScriptModule;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -23,6 +24,11 @@ public class RNXMPPPackage implements ReactPackage{
         modules.add(new RNXMPPModule(reactContext));
 
         return modules;
+    }
+
+    @Override
+    public List<Class<? extends JavaScriptModule>> createJSModules() {
+        return null; //default
     }
 
     @Override
