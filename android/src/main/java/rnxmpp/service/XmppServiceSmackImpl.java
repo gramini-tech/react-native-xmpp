@@ -95,7 +95,7 @@ public class XmppServiceSmackImpl implements XmppService, ChatManagerListener, S
             confBuilder.setPort(port);
         }
         if (trustedHosts.contains(hostname) || (hostname == null && trustedHosts.contains(serviceName))){
-            confBuilder.setSecurityMode(SecurityMode.disabled);
+            confBuilder.setSecurityMode(SecurityMode.ifpossble);
             TLSUtils.disableHostnameVerificationForTlsCertificicates(confBuilder);
             try {
                 TLSUtils.acceptAllCertificates(confBuilder);
