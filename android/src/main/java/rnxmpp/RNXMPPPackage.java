@@ -27,11 +27,6 @@ public class RNXMPPPackage implements ReactPackage{
     }
 
     @Override
-    public List<Class<? extends JavaScriptModule>> createJSModules() {
-        return null; //default
-    }
-
-    @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
         return Collections.emptyList();
     }
