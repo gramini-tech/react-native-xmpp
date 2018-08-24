@@ -155,6 +155,23 @@ RCT_EXPORT_METHOD(sendStanza:(NSString *)stanza){
     [[RNXMPPService sharedInstance] sendStanza:stanza];
 }
 
+RCT_EXPORT_METHOD(joinRoom:(NSString *)roomJID nickName:(NSString *)nickname)
+{
+    [RNXMPPService sharedInstance].delegate = self;
+    [[RNXMPPService sharedInstance] joinRoom:roomJID nickName:nickname];
+}
+ RCT_EXPORT_METHOD(leaveRoom:(NSString *)roomJID)
+{
+    [RNXMPPService sharedInstance].delegate = self;
+    [[RNXMPPService sharedInstance] leaveRoom:roomJID];
+}
+ RCT_EXPORT_METHOD(sendRoomMessage:(NSString *)roomJID message:(NSString *)message)
+{
+    [RNXMPPService sharedInstance].delegate = self;
+    [[RNXMPPService sharedInstance] sendRoomMessage:roomJID message:message];
+}
+
+
 - (NSDictionary *)constantsToExport
 {
     return @{ PLAIN_AUTH : @(Plain),
@@ -163,5 +180,9 @@ RCT_EXPORT_METHOD(sendStanza:(NSString *)stanza){
               };
 };
 
++ (BOOL)requiresMainQueueSetup
+{
+    return NO;
+}
 
 @end

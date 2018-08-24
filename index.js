@@ -45,7 +45,7 @@ class XMPPWrapper {
     }
 
     bindDefaultListeners(): void {
-        this.listeners = [
+        this.defaultListeners = [
             NativeAppEventEmitter.addListener(map.connect, this.onConnected.bind(this)),
             NativeAppEventEmitter.addListener(map.disconnect, this.onDisconnected.bind(this)),
             NativeAppEventEmitter.addListener(map.error, XMPPWrapper.onError.bind(this)),
@@ -141,6 +141,16 @@ class XMPPWrapper {
         if (this.isConnected) {
             this.xmppObj.disconnectAfterSending();
         }
+    }
+
+    joinRoom(roomJID: string, nickname: string): void {
+        this.xmppObj.joinRoom(roomJID, nickname);
+    }
+    sendRoomMessage(message: any, roomJID: string): void {
+        this.xmppObj.sendRoomMessage(message, roomJID);
+    }
+    leaveRoom(roomJID: string): void {
+        this.xmppObj.leaveRoom(roomJID);
     }
 }
 
